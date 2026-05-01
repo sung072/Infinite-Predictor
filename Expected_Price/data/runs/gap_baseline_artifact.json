@@ -1,0 +1,12 @@
+{
+  "n_total": 719,
+  "n_test": 180,
+  "features": [
+    "mean_pairwise_rel",
+    "gap_system_to_now_rel",
+    "range_rel"
+  ],
+  "target": "next(mean_pairwise_rel)",
+  "r2_oos_holdout": 0.9631959547316248,
+  "model_path": "C:\\Users\\hadro\\Expected_Price\\Expected_Price\\data\\runs\\gap_baseline_model.joblib"
+}

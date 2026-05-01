@@ -1,0 +1,45 @@
+{
+  "schema": "expected_price.research_plan.v1",
+  "created_at_utc": "2026-04-30T14:42:45.434915+00:00",
+  "force_rerun_gaps": true,
+  "n_feedback_events": 1,
+  "step1_note": "OHLCV/Registry/팩터는 사용자 데이터 스냅샷에 맞게",
+  "step2_gap_vectorbt": [
+    "python scripts/gap_backtest_and_analyze.py",
+    "*(이번 피드백에서 `suggest_rerun_gaps` 가 있어 full+OOS+WF 를 우선 확인)*"
+  ],
+  "step3_note": "OOS·WF 는 step2 스크립트에 포함(별도 끄기: --skip-oos / --skip-wf)",
+  "step4_snapshot": [
+    "python scripts/build_ai_analysis_snapshot.py"
+  ],
+  "step4b_llm_report": [
+    "python scripts/llm_report_from_snapshot.py",
+    "python scripts/llm_report_from_snapshot.py --no-llm  # offline"
+  ],
+  "step4c_sklearn_baseline": [
+    "python scripts/train_gap_baseline.py"
+  ],
+  "step5_dry_run": [
+    "python scripts/nautilus_execution_dry_run.py"
+  ],
+  "one_shot_cycle": [
+    "python scripts/run_research_cycle.py --dry-run"
+  ],
+  "stack_verify": [
+    "python scripts/verify_expected_price_stack.py"
+  ],
+  "step6_feedback_append": "python scripts/feedback_loop_ingest.py --source manual --notes '...' ",
+  "step6_import_jsonl": "python scripts/feedback_loop_ingest.py --from-jsonl <path.jsonl>",
+  "feedback_events_tail": [
+    {
+      "source": "manual",
+      "symbol": "BTCUSDT",
+      "run_id": "local-1",
+      "suggest_rerun_gaps": true,
+      "notes": "demo loop",
+      "extra": {},
+      "schema": "expected_price.feedback_event.v1",
+      "recorded_at_utc": "2026-04-30T02:05:20.391790+00:00"
+    }
+  ]
+}

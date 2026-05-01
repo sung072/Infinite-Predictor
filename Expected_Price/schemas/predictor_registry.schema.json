@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local/expected_price/predictor_registry.schema.json",
+  "title": "PredictorRegistry",
+  "type": "object",
+  "required": ["schema_version", "predictors"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "description": "Registry 파일 포맷 버전(예: 1.0.0)."
+    },
+    "data_snapshot_id": {
+      "type": "string",
+      "description": "옵션: 이 Registry가 참조하는 가격/이벤트 데이터 스냅 식별자(재현성)."
+    },
+    "predictors": {
+      "type": "array",
+      "minItems": 0,
+      "items": { "$ref": "#/$defs/predictor" }
+    }
+  },
+  "$defs": {
+    "predictor": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "horizon",
+        "status",
+        "version"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_\\-.]*$",
+          "description": "고유 ID. `predictor_gap_metrics`의 anchors 딕셔너리 키로 동일 값 사용."
+        },
+        "name": { "type": "string" },
+        "horizon": {
+          "type": "object",
+          "required": ["kind", "spec"],
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "type": "string",
+              "enum": ["wall_clock", "bar", "session", "event_anchor"]
+            },
+            "spec": {
+              "type": "string",
+              "description": "예: 4h, 1d, 20 bars, next_close, T+N session"
+            },
+            "timezone": { "type": "string" }
+          }
+        },
+        "status": {
+          "type": "string",
+          "enum": ["candidate", "active", "retired", "challenger"]
+        },
+        "version": {
+          "type": "string",
+          "description": "예측가 정의/모델 버전(의미는 팀 합의)."
+        },
+        "symbol": { "type": "string" },
+        "venue": { "type": "string" },
+        "base_asset": { "type": "string" },
+        "quote_asset": { "type": "string" },
+        "cost": {
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "compute_tier": {
+              "type": "string",
+              "enum": ["low", "medium", "high"]
+            }
+          }
+        },
+        "meta": { "type": "object" },
+        "source": { "type": "string" },
+        "retired_at": { "type": "string" },
+        "challenger_of": { "type": "string" }
+      }
+    }
+  }
+}

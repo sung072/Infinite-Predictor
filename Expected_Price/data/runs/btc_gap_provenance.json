@@ -1,0 +1,20 @@
+{
+  "provenance": {
+    "config_sha256": "52f4873a9dfff1debae3ace0612a9e1b0c066187f8c631b74c5558a61054b59c",
+    "seed": 0,
+    "data_snapshot_id": "btc-binance-1h-720-2026",
+    "experiment_fingerprint": "822bdc5c4a7e78892a8621fd2069d3a96cc45b1b4e212746599400f5b4f5bf77",
+    "experiment_id_short": "822bdc5c4a7e7889"
+  },
+  "walkforward": null,
+  "predictor_ids": [
+    "eth_beta_pair_1d",
+    "war_news_fwd_4h"
+  ],
+  "registry_data_snapshot": "dev-synthetic-001",
+  "exploration": {
+    "n_hypotheses": 1,
+    "exploration_cap": null,
+    "fdr_q": null
+  }
+}

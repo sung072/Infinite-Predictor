@@ -1,0 +1,82 @@
+{
+  "symbols": [
+    "BTC",
+    "ETH",
+    "CHIP"
+  ],
+  "n_success": 2,
+  "n_failed": 1,
+  "failed": {
+    "CHIP": "Command '['C:\\\\Users\\\\hadro\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python311\\\\python.exe', 'C:\\\\Users\\\\hadro\\\\Expected_Price\\\\Expected_Price\\\\scripts\\\\strict_multi_cycle_research.py', '--symbol', 'CHIP', '--ohlcv', 'C:\\\\Users\\\\hadro\\\\Expected_Price\\\\Expected_Price\\\\data\\\\chipusdt_1h_30d.csv', '--factors-csv', 'C:\\\\Users\\\\hadro\\\\Expected_Price\\\\Expected_Price\\\\data\\\\derived\\\\chipusdt_factors_4p.csv', '--train-bars', '120', '--val-bars', '36', '--cycle-step', '20', '--embargos', '12,24', '--shrinks', '0.94,0.95,0.96,0.97', '--top-k', '5', '--min-evals', '3', '--unseen-ratio', '0.25', '--seed', '0', '--out-json', 'C:\\\\Users\\\\hadro\\\\Expected_Price\\\\Expected_Price\\\\data\\\\runs\\\\strict_multi_cycle_chip.json', '--out-md', 'C:\\\\Users\\\\hadro\\\\Expected_Price\\\\Expected_Price\\\\data\\\\runs\\\\strict_multi_cycle_chip.md']' returned non-zero exit status 2."
+  },
+  "best_by_symbol": [
+    {
+      "symbol": "BTC",
+      "hit_rate": 0.5428571428571428,
+      "mae_ratio": 0.979663659970969,
+      "coverage": 1.0,
+      "mean_rr": 0.8149999813436127,
+      "sharpe_per_bar": -0.011934817210837528,
+      "sharpe_annualized": -1.1170376850668327,
+      "calmar_proxy": -0.1120092486258806,
+      "composite_score": 0.4995128746490436,
+      "composite_rank_score": 0.4995128746490436,
+      "cluster_key": "base|emb=24|sh=0.97",
+      "best_formula": {
+        "formula_id": "C0000-F0021",
+        "family": "base",
+        "system_col": "p_system_shrunk_custom",
+        "shrink_weight": 0.97,
+        "embargo_bars": 24,
+        "trust_feature": null,
+        "trust_q_low": null,
+        "trust_q_high": null
+      },
+      "json_path": "data\\runs\\strict_multi_cycle_btc.json"
+    },
+    {
+      "symbol": "ETH",
+      "hit_rate": 0.6153846153846154,
+      "mae_ratio": 0.9368423755792056,
+      "coverage": 0.7222222222222222,
+      "mean_rr": 0.9987813414929458,
+      "sharpe_per_bar": 0.18052448017881556,
+      "sharpe_annualized": 16.89616555281004,
+      "calmar_proxy": 1.3754125685876797,
+      "composite_score": 0.7910952235677388,
+      "composite_rank_score": 0.7910952235677388,
+      "cluster_key": "trust_high40|emb=24|sh=0.94|feat=mean_pairwise_per_atr|q=0.6-1.0",
+      "best_formula": {
+        "formula_id": "C0000-F0014",
+        "family": "trust_high40",
+        "system_col": "p_system_shrunk_custom",
+        "shrink_weight": 0.94,
+        "embargo_bars": 24,
+        "trust_feature": "mean_pairwise_per_atr",
+        "trust_q_low": 0.6,
+        "trust_q_high": 1.0
+      },
+      "json_path": "data\\runs\\strict_multi_cycle_eth.json"
+    }
+  ],
+  "accuracy_summary": {
+    "n_symbols_reported": 2,
+    "n_symbols_finite_hit": 2,
+    "n_symbols_finite_mae_ratio": 2,
+    "mean_directional_hit_rate": 0.5791208791208791,
+    "median_directional_hit_rate": 0.6153846153846154,
+    "mean_mae_ratio_sys_over_naive": 0.9582530177750873,
+    "median_mae_ratio_sys_over_naive": 0.979663659970969,
+    "note_ko": "hit_rate 는 final unseen best 행 기준; mae_ratio 는 1에 가까울수록 naive 대비 오차 유사."
+  },
+  "similar_pairs_top20": [
+    {
+      "pair": "BTC-ETH",
+      "symbol_a": "BTC",
+      "symbol_b": "ETH",
+      "formula_similarity": 0.2,
+      "hit_gap_abs": 0.0725274725274726,
+      "mae_ratio_gap_abs": 0.04282128439176347
+    }
+  ]
+}

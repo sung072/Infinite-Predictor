@@ -1,0 +1,41 @@
+# Expected_Price: unittest + execution JSONL 스모크
+# 저장소 루트가 (1) 프로젝트 폴더 자체이거나 (2) 한 단계 위이면서 이 프로젝트가 Expected_Price/ 아래일 때 둘 다 동작
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Resolve project root
+        id: root
+        run: |
+          if [ -f requirements-research.txt ] && [ -d tests ]; then
+            echo "path=." >> $GITHUB_OUTPUT
+            echo "Resolved: repository root = project (.)"
+          elif [ -f Expected_Price/requirements-research.txt ] && [ -d Expected_Price/tests ]; then
+            echo "path=Expected_Price" >> $GITHUB_OUTPUT
+            echo "Resolved: project in Expected_Price/"
+          else
+            echo "::error::requirements-research.txt + tests/ not found in . or Expected_Price/"
+            ls -la
+            exit 1
+          fi
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: ${{ steps.root.outputs.path }}/requirements-research.txt
+
+      - name: Run CI (scripts/run_ci.py = pip + unittest + JSONL)
+        working-directory: ${{ steps.root.outputs.path }}
+        run: python scripts/run_ci.py

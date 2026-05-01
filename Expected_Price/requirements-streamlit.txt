@@ -1,0 +1,4 @@
+# Streamlit 대시보드(연구 시각화). core 연구는 requirements-research.txt 를 먼저.
+-r requirements-research.txt
+streamlit>=1.28.0
+plotly>=5.0

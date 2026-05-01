@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "data_snapshot_id": "btc-unified-v1",
+  "predictors": [
+    {
+      "id": "btc_ema_fast",
+      "name": "빠른 EMA 목표가",
+      "horizon": { "kind": "bar", "spec": "1h", "timezone": "UTC" },
+      "status": "active",
+      "version": "0.1.0",
+      "symbol": "BTCUSDT",
+      "venue": "binance",
+      "base_asset": "BTC",
+      "quote_asset": "USDT",
+      "meta": { "factor_column": "p_ema_fast", "anchor_cohort": "trend" }
+    },
+    {
+      "id": "btc_ema_slow",
+      "name": "느린 EMA 목표가",
+      "horizon": { "kind": "bar", "spec": "1h", "timezone": "UTC" },
+      "status": "active",
+      "version": "0.1.0",
+      "symbol": "BTCUSDT",
+      "venue": "binance",
+      "base_asset": "BTC",
+      "quote_asset": "USDT",
+      "meta": { "factor_column": "p_ema_slow", "anchor_cohort": "trend" }
+    },
+    {
+      "id": "btc_resist_24h",
+      "name": "24봉 저항 밴드",
+      "horizon": { "kind": "bar", "spec": "24", "timezone": "UTC" },
+      "status": "challenger",
+      "version": "0.1.0",
+      "symbol": "BTCUSDT",
+      "venue": "binance",
+      "base_asset": "BTC",
+      "quote_asset": "USDT",
+      "meta": { "factor_column": "p_high_band", "anchor_cohort": "range" }
+    },
+    {
+      "id": "btc_support_24h",
+      "name": "24봉 지지 밴드",
+      "horizon": { "kind": "bar", "spec": "24", "timezone": "UTC" },
+      "status": "challenger",
+      "version": "0.1.0",
+      "symbol": "BTCUSDT",
+      "venue": "binance",
+      "base_asset": "BTC",
+      "quote_asset": "USDT",
+      "meta": { "factor_column": "p_low_band", "anchor_cohort": "range" }
+    },
+    {
+      "id": "vol_as_price_demo",
+      "name": "거래량 → 가격눈금(량가)",
+      "horizon": { "kind": "bar", "spec": "1", "timezone": "UTC" },
+      "status": "active",
+      "version": "0.1.0",
+      "meta": { "price_like": "volume", "anchor_cohort": "trend" }
+    },
+    {
+      "id": "time_as_price_demo",
+      "name": "시간(UTC) → 가격눈금(시간가)",
+      "horizon": { "kind": "bar", "spec": "1", "timezone": "UTC" },
+      "status": "active",
+      "version": "0.1.0",
+      "meta": { "price_like": "time", "anchor_cohort": "trend" }
+    },
+    {
+      "id": "war_news_fwd_4h",
+      "name": "뉴스/이벤트 4h 목표(뉴스가) — factors 열 p_war",
+      "horizon": { "kind": "wall_clock", "spec": "4h", "timezone": "UTC" },
+      "status": "challenger",
+      "version": "0.1.0",
+      "symbol": "BTCUSDT",
+      "venue": "binance",
+      "base_asset": "BTC",
+      "quote_asset": "USDT",
+      "meta": { "factor_column": "p_war", "anchor_cohort": "range" }
+    },
+    {
+      "id": "sentiment_as_price_demo",
+      "name": "감성 스칼라 → 감성가(데모)",
+      "horizon": { "kind": "bar", "spec": "1h", "timezone": "UTC" },
+      "status": "challenger",
+      "version": "0.1.0",
+      "symbol": "BTCUSDT",
+      "venue": "binance",
+      "base_asset": "BTC",
+      "quote_asset": "USDT",
+      "meta": { "factor_column": "p_sentiment", "anchor_cohort": "trend" }
+    },
+    {
+      "id": "eth_beta_pair_1d",
+      "name": "페어(ETH) 1D 목표 — factors 열 p_eth",
+      "horizon": { "kind": "wall_clock", "spec": "1d", "timezone": "UTC" },
+      "status": "challenger",
+      "version": "0.1.0",
+      "symbol": "ETHUSDT",
+      "base_asset": "ETH",
+      "quote_asset": "USDT",
+      "meta": { "factor_column": "p_eth", "anchor_cohort": "range" }
+    }
+  ]
+}

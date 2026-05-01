@@ -1,0 +1,22 @@
+{
+  "provenance": {
+    "config_sha256": "9b71da141a682ae1d813aa69dde05794807ec77cd339eb523854d61654d2e7e9",
+    "seed": 0,
+    "data_snapshot_id": "btc-4p-backtest-001",
+    "experiment_fingerprint": "b6c1aa7a39c158add624ae6a4a938a38a849e8474cf7c59e9f4b734a81c182bf",
+    "experiment_id_short": "b6c1aa7a39c158ad"
+  },
+  "walkforward": null,
+  "predictor_ids": [
+    "btc_ema_fast",
+    "btc_ema_slow",
+    "btc_resist_24h",
+    "btc_support_24h"
+  ],
+  "registry_data_snapshot": "btc-demo-factors-001",
+  "exploration": {
+    "n_hypotheses": 1,
+    "exploration_cap": null,
+    "fdr_q": null
+  }
+}

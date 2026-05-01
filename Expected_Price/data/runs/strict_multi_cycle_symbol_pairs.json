@@ -1,0 +1,123 @@
+{
+  "source": "data\\runs\\strict_multi_cycle_summary_10.json",
+  "sim_threshold": 1.0,
+  "hit_gap_max": 0.08,
+  "n_symbols": 10,
+  "n_pairs_used": 9,
+  "groups": [
+    {
+      "group_id": 1,
+      "symbols": [
+        "ADA",
+        "AVAX",
+        "LINK",
+        "XRP"
+      ],
+      "size": 4,
+      "common_cluster_key": null,
+      "formula_families": [
+        "trust_high40"
+      ]
+    },
+    {
+      "group_id": 2,
+      "symbols": [
+        "BTC",
+        "DOGE",
+        "ETH",
+        "SOL"
+      ],
+      "size": 4,
+      "common_cluster_key": null,
+      "formula_families": [
+        "base"
+      ]
+    },
+    {
+      "group_id": 3,
+      "symbols": [
+        "BNB",
+        "TRX"
+      ],
+      "size": 2,
+      "common_cluster_key": null,
+      "formula_families": [
+        "base"
+      ]
+    }
+  ],
+  "pairs_used": [
+    {
+      "pair": "ADA-LINK",
+      "symbol_a": "ADA",
+      "symbol_b": "LINK",
+      "formula_similarity": 1.0,
+      "hit_gap_abs": 0.0060606060606061,
+      "mae_ratio_gap_abs": 0.008222407144825472
+    },
+    {
+      "pair": "AVAX-XRP",
+      "symbol_a": "AVAX",
+      "symbol_b": "XRP",
+      "formula_similarity": 1.0,
+      "hit_gap_abs": 0.025568181818181768,
+      "mae_ratio_gap_abs": 0.015211111411575051
+    },
+    {
+      "pair": "BNB-TRX",
+      "symbol_a": "BNB",
+      "symbol_b": "TRX",
+      "formula_similarity": 1.0,
+      "hit_gap_abs": 0.042857142857142816,
+      "mae_ratio_gap_abs": 0.024640011610477797
+    },
+    {
+      "pair": "ADA-XRP",
+      "symbol_a": "ADA",
+      "symbol_b": "XRP",
+      "formula_similarity": 1.0,
+      "hit_gap_abs": 0.05018939393939392,
+      "mae_ratio_gap_abs": 0.016188643232655453
+    },
+    {
+      "pair": "LINK-XRP",
+      "symbol_a": "LINK",
+      "symbol_b": "XRP",
+      "formula_similarity": 1.0,
+      "hit_gap_abs": 0.05625000000000002,
+      "mae_ratio_gap_abs": 0.007966236087829981
+    },
+    {
+      "pair": "BTC-SOL",
+      "symbol_a": "BTC",
+      "symbol_b": "SOL",
+      "formula_similarity": 1.0,
+      "hit_gap_abs": 0.05714285714285716,
+      "mae_ratio_gap_abs": 0.008848845815350503
+    },
+    {
+      "pair": "DOGE-SOL",
+      "symbol_a": "DOGE",
+      "symbol_b": "SOL",
+      "formula_similarity": 1.0,
+      "hit_gap_abs": 0.05714285714285716,
+      "mae_ratio_gap_abs": 0.0018239879323497243
+    },
+    {
+      "pair": "ETH-SOL",
+      "symbol_a": "ETH",
+      "symbol_b": "SOL",
+      "formula_similarity": 1.0,
+      "hit_gap_abs": 0.05714285714285716,
+      "mae_ratio_gap_abs": 0.01003833893131345
+    },
+    {
+      "pair": "ADA-AVAX",
+      "symbol_a": "ADA",
+      "symbol_b": "AVAX",
+      "formula_similarity": 1.0,
+      "hit_gap_abs": 0.07575757575757569,
+      "mae_ratio_gap_abs": 0.0009775318210804018
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "provenance": [
+    {
+      "config_sha256": "e37801d92306daac3ad9d451f2e755570f9c1d67d52aa31d68760be4aa7feba2",
+      "seed": 0,
+      "data_snapshot_id": "ethusdt-4p-wf-001",
+      "experiment_fingerprint": "e134725aadfebe98b9edb0a4fde409782e0d923ffca64335f9f45ae8ab8215bc",
+      "experiment_id_short": "e134725aadfebe98"
+    },
+    {
+      "config_sha256": "51bfd4039e1ec1f15116bba7333ac0736e3f2d8b30a60967e3bbe2d9e8417309",
+      "seed": 1,
+      "data_snapshot_id": "ethusdt-4p-wf-001",
+      "experiment_fingerprint": "a695b2f9a996ba3c912bf987ed785cdf52a747f6c85399de0c173633cf867194",
+      "experiment_id_short": "a695b2f9a996ba3c"
+    },
+    {
+      "config_sha256": "b5a8950c7df9be609624bcc06af85295f07a1872d74bcf4fd5ea18e8f8ad62b8",
+      "seed": 2,
+      "data_snapshot_id": "ethusdt-4p-wf-001",
+      "experiment_fingerprint": "6d57aa6c1bd3a98dce7d0b8ad6a455770f6a4b6b6ae1b89c131eac01e96c1d6c",
+      "experiment_id_short": "6d57aa6c1bd3a98d"
+    },
+    {
+      "config_sha256": "34370aa70083221b6931297282b1a79f8b2429c0a7e23fc5643135803cce63f5",
+      "seed": 3,
+      "data_snapshot_id": "ethusdt-4p-wf-001",
+      "experiment_fingerprint": "cf024ed7252b0de24cf2ff51a8e0902ced938942d28634ad3e8a896da1f10170",
+      "experiment_id_short": "cf024ed7252b0de2"
+    },
+    {
+      "config_sha256": "970a804db294e377b1887ba825ec695755bef5e48363d5be6e730604133f3b90",
+      "seed": 4,
+      "data_snapshot_id": "ethusdt-4p-wf-001",
+      "experiment_fingerprint": "286ab59adfcb46ec4dd6ecd4cd9ddee04c2c292d4e649f88576a41abda1ead0f",
+      "experiment_id_short": "286ab59adfcb46ec"
+    },
+    {
+      "config_sha256": "210fdb8cca61bc83d150907288971401fffaa4c6032b46c6e0d3164c69f1f38d",
+      "seed": 5,
+      "data_snapshot_id": "ethusdt-4p-wf-001",
+      "experiment_fingerprint": "b766469d8c14507b2471609c9a6ded11382313c6deb30d63ccc006d45a6bf997",
+      "experiment_id_short": "b766469d8c14507b"
+    },
+    {
+      "config_sha256": "c650cb89d8c46254ffd3dadae3898c18895c50d80e898a57d24a0e6a5dc81be5",
+      "seed": 6,
+      "data_snapshot_id": "ethusdt-4p-wf-001",
+      "experiment_fingerprint": "b3d46b988a96e255f4e23336646e79e5e05a525b889c53c2c51b1933d8ea552e",
+      "experiment_id_short": "b3d46b988a96e255"
+    },
+    {
+      "config_sha256": "dd313e9369bbd54bd690082563a0414ae973d55cc7047333ef022c0f45978457",
+      "seed": 7,
+      "data_snapshot_id": "ethusdt-4p-wf-001",
+      "experiment_fingerprint": "eca7057292f79897771915bca0bd5d157d1c7ea7de649cfc498f103a7cdee138",
+      "experiment_id_short": "eca7057292f79897"
+    },
+    {
+      "config_sha256": "05def151dede83603ef65433222a3c9b1a9aae66dcf443d168ce8f70b4bd9a45",
+      "seed": 8,
+      "data_snapshot_id": "ethusdt-4p-wf-001",
+      "experiment_fingerprint": "06e4b5ac922aaa17bdcddd0abd0ba4762c0bca551c10ad38810b157e7f159b74",
+      "experiment_id_short": "06e4b5ac922aaa17"
+    }
+  ],
+  "walkforward": {
+    "n_folds": 9,
+    "folds": [
+      {
+        "fold_id": 0,
+        "train_index": [
+          0,
+          240
+        ],
+        "test_index": [
+          264,
+          312
+        ],
+        "n_train": 240,
+        "n_test": 48,
+        "n_embargo": 24
+      },
+      {
+        "fold_id": 1,
+        "train_index": [
+          48,
+          288
+        ],
+        "test_index": [
+          312,
+          360
+        ],
+        "n_train": 240,
+        "n_test": 48,
+        "n_embargo": 24
+      },
+      {
+        "fold_id": 2,
+        "train_index": [
+          96,
+          336
+        ],
+        "test_index": [
+          360,
+          408
+        ],
+        "n_train": 240,
+        "n_test": 48,
+        "n_embargo": 24
+      },
+      {
+        "fold_id": 3,
+        "train_index": [
+          144,
+          384
+        ],
+        "test_index": [
+          408,
+          456
+        ],
+        "n_train": 240,
+        "n_test": 48,
+        "n_embargo": 24
+      },
+      {
+        "fold_id": 4,
+        "train_index": [
+          192,
+          432
+        ],
+        "test_index": [
+          456,
+          504
+        ],
+        "n_train": 240,
+        "n_test": 48,
+        "n_embargo": 24
+      },
+      {
+        "fold_id": 5,
+        "train_index": [
+          240,
+          480
+        ],
+        "test_index": [
+          504,
+          552
+        ],
+        "n_train": 240,
+        "n_test": 48,
+        "n_embargo": 24
+      },
+      {
+        "fold_id": 6,
+        "train_index": [
+          288,
+          528
+        ],
+        "test_index": [
+          552,
+          600
+        ],
+        "n_train": 240,
+        "n_test": 48,
+        "n_embargo": 24
+      },
+      {
+        "fold_id": 7,
+        "train_index": [
+          336,
+          576
+        ],
+        "test_index": [
+          600,
+          648
+        ],
+        "n_train": 240,
+        "n_test": 48,
+        "n_embargo": 24
+      },
+      {
+        "fold_id": 8,
+        "train_index": [
+          384,
+          624
+        ],
+        "test_index": [
+          648,
+          696
+        ],
+        "n_train": 240,
+        "n_test": 48,
+        "n_embargo": 24
+      }
+    ]
+  },
+  "predictor_ids": [
+    "btc_ema_fast",
+    "btc_ema_slow",
+    "btc_resist_24h",
+    "btc_support_24h"
+  ],
+  "registry_data_snapshot": "btc-demo-factors-001",
+  "exploration": {
+    "n_hypotheses": 1,
+    "exploration_cap": null,
+    "fdr_q": null
+  }
+}

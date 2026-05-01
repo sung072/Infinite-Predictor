@@ -1,0 +1,13 @@
+# pip install pre-commit && pre-commit install
+# 훅: 빠른 unittest + (선택) 전체 run_ci 는 수동
+default_language_version:
+  python: python3.11
+repos:
+  - repo: local
+    hooks:
+      - id: run-ci-fast
+        name: run-ci-fast (unittest + skip pip, no jsonl)
+        entry: python scripts/run_ci.py --skip-pip --no-jsonl -q
+        language: system
+        pass_filenames: false
+        always_run: true

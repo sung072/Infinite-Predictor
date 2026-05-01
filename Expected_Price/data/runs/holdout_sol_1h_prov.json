@@ -1,0 +1,89 @@
+{
+  "provenance": {
+    "config_sha256": "800d240d9ac5957ef384c684aaeee7453b46b73b4bf7071123dc4fe675e7361f",
+    "seed": 0,
+    "data_snapshot_id": "btc-demo-factors-001",
+    "experiment_fingerprint": "31af3c04b6066eeb65141ff26bd4025f046d4520be5a0d7d77d5295a9b9a4975",
+    "experiment_id_short": "31af3c04b6066eeb",
+    "temporal_holdout": {
+      "split": {
+        "n_train": 500,
+        "n_embargo": 24,
+        "n_val": 120,
+        "n_window": 644,
+        "train_slice": [
+          0,
+          500
+        ],
+        "embargo_slice": [
+          500,
+          524
+        ],
+        "val_slice": [
+          524,
+          644
+        ]
+      },
+      "candle_alignment": {
+        "same_bar_grid_as_backtest": true,
+        "validation_is_measured_in_bars_not_calendar_dates": true,
+        "median_step_between_rows": "0 days 01:00:00",
+        "train": {
+          "n_bars": 500,
+          "first_bar_label": "2026-03-31T16:00:00+00:00",
+          "last_bar_label": "2026-04-21T11:00:00+00:00"
+        },
+        "embargo": {
+          "n_bars": 24,
+          "first_bar_label": "2026-04-21T12:00:00+00:00",
+          "last_bar_label": "2026-04-22T11:00:00+00:00"
+        },
+        "validation": {
+          "n_bars": 120,
+          "first_bar_label": "2026-04-22T12:00:00+00:00",
+          "last_bar_label": "2026-04-27T11:00:00+00:00"
+        },
+        "n_validation_bars": 120,
+        "boundary_semantics": "행 순서가 시간 순서와 같다면: train의 last_bar 직후 다음 행은 embargo 첫 행(embargo>0), embargo가 비었으면 val 첫 행이 곧 '산출 마지막 봉 종료 직후의 다음 캔들'에 해당."
+      },
+      "note": "검증 지표(metrics_validation)는 embargo 이후 val 바만 사용. full_gap_df는 train·embargo·val 전 구간 gap 행. 백테스트와 검증은 반드시 같은 봉 간격 CSV에서 바 개수로 맞출 것."
+    }
+  },
+  "walkforward": null,
+  "predictor_ids": [
+    "btc_ema_fast",
+    "btc_ema_slow",
+    "btc_resist_24h",
+    "btc_support_24h"
+  ],
+  "registry_data_snapshot": "btc-demo-factors-001",
+  "exploration": {
+    "n_hypotheses": 1,
+    "exploration_cap": null,
+    "fdr_q": null
+  },
+  "holdout_metrics": {
+    "n_used": 119,
+    "directional_hit_rate": 0.5470085470085471,
+    "mae_sys_next_close": 0.22231463772975868,
+    "mae_naive_now_next_close": 0.22403361344537728,
+    "mae_ratio_sys_over_naive": 0.9923271526572163,
+    "spearman_signed_sys_vs_fwd1": 0.13728481926531386,
+    "system_col": "p_system_shrunk_custom",
+    "shrink_weight": 0.96,
+    "n_rows_validation": 120
+  },
+  "holdout_accuracy_summary_ko": "[시스템가 검증 결과] (바로 직전까지 백테스트·예측가·시스템가 산출 후, 다음 검증 캔들들만 채점)\n  · 검증에 사용한 표본 수(유효 행): 119\n  · 방향 적중률 directional_hit_rate: 0.5470 (시스템가 방향과 다음 종가 방향이 같은 비율)\n  · 대비 단순 기준 대비 오차 비율 mae_ratio_sys_over_naive: 0.9923 (< 1 이면 시스템가가 다음 종가에 더 가깝다)\n  · Spearman(signed_sys_vs_now, fwd_1): 0.1373\n  · 적용 시스템가 정의: `p_system_shrunk_custom`\n\n한 줄: 정확도(방향)= 0.5470, 오차비율(naive 대비)= 0.9923 - 위 수치는 검증 캔들 구간에서만 계산됨.",
+  "holdout_run_info": {
+    "registry": "C:\\Users\\hadro\\Expected_Price\\Expected_Price\\schemas\\predictor_registry.btc_4p.json",
+    "factors_csv": "C:\\Users\\hadro\\Expected_Price\\Expected_Price\\data\\derived\\solusdt_factors_4p.csv",
+    "csv_ohlcv": "C:\\Users\\hadro\\Expected_Price\\Expected_Price\\data\\solusdt_1h_30d.csv",
+    "holdout_train_bars": 500,
+    "embargo": 24,
+    "holdout_val_bars": 120,
+    "holdout_system_col": "p_system_shrunk_custom",
+    "holdout_shrink": 0.96,
+    "gap_pairwise": true,
+    "system_variants": true
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "data_snapshot_id": "dev-synthetic-001",
+  "predictors": [
+    {
+      "id": "war_news_fwd_4h",
+      "name": "지정 뉴스/전쟁 류 이벤트 4h 선행 목표가",
+      "horizon": { "kind": "wall_clock", "spec": "4h", "timezone": "UTC" },
+      "status": "active",
+      "version": "0.1.0",
+      "symbol": "BTCUSDT",
+      "venue": "binance",
+      "base_asset": "BTC",
+      "quote_asset": "USDT",
+      "cost": { "compute_tier": "medium" },
+      "source": "event_rule_v1",
+      "meta": { "factor_column": "p_war", "anchor_cohort": "abc" }
+    },
+    {
+      "id": "eth_beta_pair_1d",
+      "name": "ETH 베이시스/페어 1D 목표",
+      "horizon": { "kind": "wall_clock", "spec": "1d", "timezone": "UTC" },
+      "status": "challenger",
+      "version": "0.1.0",
+      "symbol": "ETHUSDT",
+      "challenger_of": "eth_beta_pair_0_9_1d",
+      "meta": { "factor_column": "p_eth", "anchor_cohort": "de" }
+    },
+    {
+      "id": "vol_as_price_demo",
+      "name": "거래량 → 가격 눈금(량가) 데모",
+      "horizon": { "kind": "bar", "spec": "1", "timezone": "UTC" },
+      "status": "candidate",
+      "version": "0.1.0",
+      "meta": { "price_like": "volume", "anchor_cohort": "abc" }
+    },
+    {
+      "id": "time_as_price_demo",
+      "name": "시간(UTC 사이클) → 가격 눈금(시간가) 데모",
+      "horizon": { "kind": "bar", "spec": "1", "timezone": "UTC" },
+      "status": "candidate",
+      "version": "0.1.0",
+      "meta": { "price_like": "time", "anchor_cohort": "de" }
+    }
+  ]
+}

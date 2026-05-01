@@ -1,0 +1,13 @@
+# 프로젝트 기본: 다른 서비스(8500대 등)와 충돌 피하려고 7000–7999 대역 사용
+[server]
+port = 7520
+address = "127.0.0.1"
+
+# 검은·다크 톤 (눈부심 완화)
+[theme]
+base = "dark"
+primaryColor = "#8b7ec8"
+backgroundColor = "#0a0a0c"
+secondaryBackgroundColor = "#141417"
+textColor = "#e4e4e4"
+font = "sans serif"

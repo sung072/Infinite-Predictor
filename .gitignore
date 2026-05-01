@@ -1,0 +1,21 @@
+# Python / venv
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Secrets & local env
+.env
+.env.*
+!.env.example
+
+# OS
+Thumbs.db
+Desktop.ini

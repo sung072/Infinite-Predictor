@@ -1,0 +1,210 @@
+{
+  "provenance": [
+    {
+      "config_sha256": "e37801d92306daac3ad9d451f2e755570f9c1d67d52aa31d68760be4aa7feba2",
+      "seed": 0,
+      "data_snapshot_id": "btc-4p-wf-001",
+      "experiment_fingerprint": "ebbf049560784f6f1df5639888d640920afb245d71080c79b64b533cd3a9872e",
+      "experiment_id_short": "ebbf049560784f6f"
+    },
+    {
+      "config_sha256": "51bfd4039e1ec1f15116bba7333ac0736e3f2d8b30a60967e3bbe2d9e8417309",
+      "seed": 1,
+      "data_snapshot_id": "btc-4p-wf-001",
+      "experiment_fingerprint": "fa75f88c1eccdaaa9e64d74d8c1032ad058923f43d76113529590fda40ad620a",
+      "experiment_id_short": "fa75f88c1eccdaaa"
+    },
+    {
+      "config_sha256": "b5a8950c7df9be609624bcc06af85295f07a1872d74bcf4fd5ea18e8f8ad62b8",
+      "seed": 2,
+      "data_snapshot_id": "btc-4p-wf-001",
+      "experiment_fingerprint": "764a10c5adf4aa3e26c98372840fe6bc9965a10a1c30b487d663652409a1fdb3",
+      "experiment_id_short": "764a10c5adf4aa3e"
+    },
+    {
+      "config_sha256": "34370aa70083221b6931297282b1a79f8b2429c0a7e23fc5643135803cce63f5",
+      "seed": 3,
+      "data_snapshot_id": "btc-4p-wf-001",
+      "experiment_fingerprint": "64c4f750e3b784c30d241bb190cd756954e0977ae80f4a6d3ab95771bd812230",
+      "experiment_id_short": "64c4f750e3b784c3"
+    },
+    {
+      "config_sha256": "970a804db294e377b1887ba825ec695755bef5e48363d5be6e730604133f3b90",
+      "seed": 4,
+      "data_snapshot_id": "btc-4p-wf-001",
+      "experiment_fingerprint": "6012fe8f225575a8e35cc72d6c664f01032470e0c7c5b1397b273e3deb2e383b",
+      "experiment_id_short": "6012fe8f225575a8"
+    },
+    {
+      "config_sha256": "210fdb8cca61bc83d150907288971401fffaa4c6032b46c6e0d3164c69f1f38d",
+      "seed": 5,
+      "data_snapshot_id": "btc-4p-wf-001",
+      "experiment_fingerprint": "b7f8759db68a8c1a1aa039e1e6a9f5421d934a5e232ae91327357e414fc45597",
+      "experiment_id_short": "b7f8759db68a8c1a"
+    },
+    {
+      "config_sha256": "c650cb89d8c46254ffd3dadae3898c18895c50d80e898a57d24a0e6a5dc81be5",
+      "seed": 6,
+      "data_snapshot_id": "btc-4p-wf-001",
+      "experiment_fingerprint": "be803797fbabb7d54d407a437f2cdd7133f42bdf889ea6054e64bae4817aa67e",
+      "experiment_id_short": "be803797fbabb7d5"
+    },
+    {
+      "config_sha256": "dd313e9369bbd54bd690082563a0414ae973d55cc7047333ef022c0f45978457",
+      "seed": 7,
+      "data_snapshot_id": "btc-4p-wf-001",
+      "experiment_fingerprint": "a9a2748294be84043c7ef9364cdb268e41393500b24f2e7d36181395be840a1f",
+      "experiment_id_short": "a9a2748294be8404"
+    },
+    {
+      "config_sha256": "05def151dede83603ef65433222a3c9b1a9aae66dcf443d168ce8f70b4bd9a45",
+      "seed": 8,
+      "data_snapshot_id": "btc-4p-wf-001",
+      "experiment_fingerprint": "ee900112709d5396a293a0ed3519e57842b8fe9d8de0e238aade1caf653166ed",
+      "experiment_id_short": "ee900112709d5396"
+    }
+  ],
+  "walkforward": {
+    "n_folds": 9,
+    "folds": [
+      {
+        "fold_id": 0,
+        "train_index": [
+          0,
+          240
+        ],
+        "test_index": [
+          264,
+          312
+        ],
+        "n_train": 240,
+        "n_test": 48,
+        "n_embargo": 24
+      },
+      {
+        "fold_id": 1,
+        "train_index": [
+          48,
+          288
+        ],
+        "test_index": [
+          312,
+          360
+        ],
+        "n_train": 240,
+        "n_test": 48,
+        "n_embargo": 24
+      },
+      {
+        "fold_id": 2,
+        "train_index": [
+          96,
+          336
+        ],
+        "test_index": [
+          360,
+          408
+        ],
+        "n_train": 240,
+        "n_test": 48,
+        "n_embargo": 24
+      },
+      {
+        "fold_id": 3,
+        "train_index": [
+          144,
+          384
+        ],
+        "test_index": [
+          408,
+          456
+        ],
+        "n_train": 240,
+        "n_test": 48,
+        "n_embargo": 24
+      },
+      {
+        "fold_id": 4,
+        "train_index": [
+          192,
+          432
+        ],
+        "test_index": [
+          456,
+          504
+        ],
+        "n_train": 240,
+        "n_test": 48,
+        "n_embargo": 24
+      },
+      {
+        "fold_id": 5,
+        "train_index": [
+          240,
+          480
+        ],
+        "test_index": [
+          504,
+          552
+        ],
+        "n_train": 240,
+        "n_test": 48,
+        "n_embargo": 24
+      },
+      {
+        "fold_id": 6,
+        "train_index": [
+          288,
+          528
+        ],
+        "test_index": [
+          552,
+          600
+        ],
+        "n_train": 240,
+        "n_test": 48,
+        "n_embargo": 24
+      },
+      {
+        "fold_id": 7,
+        "train_index": [
+          336,
+          576
+        ],
+        "test_index": [
+          600,
+          648
+        ],
+        "n_train": 240,
+        "n_test": 48,
+        "n_embargo": 24
+      },
+      {
+        "fold_id": 8,
+        "train_index": [
+          384,
+          624
+        ],
+        "test_index": [
+          648,
+          696
+        ],
+        "n_train": 240,
+        "n_test": 48,
+        "n_embargo": 24
+      }
+    ]
+  },
+  "predictor_ids": [
+    "btc_ema_fast",
+    "btc_ema_slow",
+    "btc_resist_24h",
+    "btc_support_24h"
+  ],
+  "registry_data_snapshot": "btc-demo-factors-001",
+  "exploration": {
+    "n_hypotheses": 1,
+    "exploration_cap": null,
+    "fdr_q": null
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "documentation_ko": [
+    "이 파일은 strict_multi_cycle_research.py 의 composite 관련 CLI 기본값을 한 번에 맞출 때 사용한다.",
+    "JSON은 주석을 지원하지 않으므로 설명은 이 배열과 composite_formula_ko 에 적는다.",
+    "CLI 기본 가중치(0.40,0.20,0.15,0.15,0.10)는 아래 recommended_weight_sets_ko 의 balanced 와 동일하다.",
+    "composite_norm_final 기본 raw 이유: 최종 후보는 적고 동일 unseen 창을 공유하므로 후보 간 z-ranking 은 잡음 상대순위로 읽히기 쉽다. 절대 comp_raw 가 보고에 유리하다.",
+    "cohort_sensitivity: true 이면 dev validations 풀에 대해 여러 상위 fraction 코호트를 추가 산출한다. fraction 개수가 많을수록 JSON dev_cohort_sensitivity 가 커지므로 기본 3개 이하를 권장한다."
+  ],
+  "composite_formula_ko": {
+    "raw_composite_score": "공식별 단일 검증 DF에서: mae_ratio 가 유한할 때만 정의. mae_term=1/max(mae_ratio,1e-9), hit_term=directional_hit_rate(비유한 시 0), rr/sharpe_ann/calmar 는 tanh(x/3) 로 스케일 캡 후 w_mae*mae_term + w_hit*hit_term + w_rr*rr_term + w_sharpe*shp_term + w_calmar*cal_term",
+    "meta_composite_rank_score": "composite_norm=raw 이면 클러스터별 validations 의 composite_score 평균(composite_mean). zscore_within_run 이면 클러스터 행들 사이에서 -mae_ratio_mean, hit_mean, mean_rr_mean, sharpe_annualized_mean, calmar_mean 을 각각 z 후 동일 가중치로 합산",
+    "final_composite_rank_score": "composite_norm_final=raw 이면 unseen 에서만 계산한 composite_score 와 동일. zscore_within_run 이면 최종 후보 K 간 unseen 지표로만 동일 z-블렌드(명시적 선택 시에만)"
+  },
+  "recommended_weight_sets_ko": {
+    "balanced": {
+      "w_mae": 0.4,
+      "w_hit": 0.2,
+      "w_rr": 0.15,
+      "w_sharpe": 0.15,
+      "w_calmar": 0.1,
+      "sum": 1.0,
+      "label_ko": "균형형",
+      "description_ko": "MAE·방향(hit)·mean_rr·Sharpe·Calmar 를 한 줄 composite 에서 균형 있게 본다. 스크립트 CLI 기본 가중치와 동일."
+    },
+    "direction_focused": {
+      "w_mae": 0.28,
+      "w_hit": 0.38,
+      "w_rr": 0.22,
+      "w_sharpe": 0.08,
+      "w_calmar": 0.04,
+      "sum": 1.0,
+      "label_ko": "방향·공격형",
+      "description_ko": "방향 정확도와 hit rate 를 최우선으로 하는 공격형. 단기 부호/적중을 강조하고 리스크 항목 비중은 낮춘다."
+    },
+    "risk_adjusted_focused": {
+      "w_mae": 0.32,
+      "w_hit": 0.12,
+      "w_rr": 0.1,
+      "w_sharpe": 0.28,
+      "w_calmar": 0.18,
+      "sum": 1.0,
+      "label_ko": "리스크 조정",
+      "description_ko": "연환산 Sharpe·Calmar 에 더 큰 비중을 두어 변동·낙폭 대비 성과를 우선 평가한다. hit 비중은 상대적으로 낮다."
+    }
+  },
+  "composite_weights": {
+    "w_mae": 0.4,
+    "w_mae_tail": 0.0,
+    "w_hit": 0.2,
+    "w_rr": 0.15,
+    "w_sharpe": 0.15,
+    "w_calmar": 0.1
+  },
+  "composite_norm": "zscore_within_run",
+  "composite_norm_final": "raw",
+  "rank_by": "composite",
+  "cohort_top_fraction": 0.1,
+  "cohort_sensitivity": false,
+  "cohort_sensitivity_fractions": "0.05,0.1,0.2"
+}

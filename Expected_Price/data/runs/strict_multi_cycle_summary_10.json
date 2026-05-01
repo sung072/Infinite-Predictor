@@ -1,0 +1,361 @@
+{
+  "symbols": [
+    "BTC",
+    "ETH",
+    "SOL",
+    "BNB",
+    "XRP",
+    "ADA",
+    "DOGE",
+    "AVAX",
+    "LINK",
+    "TRX"
+  ],
+  "n_success": 10,
+  "n_failed": 0,
+  "failed": {},
+  "best_by_symbol": [
+    {
+      "symbol": "ADA",
+      "hit_rate": 0.6060606060606061,
+      "mae_ratio": 0.9863575507419994,
+      "coverage": 0.9444444444444444,
+      "cluster_key": "trust_high40|emb=24|sh=0.96|feat=mean_pairwise_per_atr|q=0.6-1.0",
+      "best_formula": {
+        "formula_id": "C0000-F0020",
+        "family": "trust_high40",
+        "system_col": "p_system_shrunk_custom",
+        "shrink_weight": 0.96,
+        "embargo_bars": 24,
+        "trust_feature": "mean_pairwise_per_atr",
+        "trust_q_low": 0.6,
+        "trust_q_high": 1.0
+      },
+      "json_path": "data\\runs\\strict_multi_cycle_ada.json"
+    },
+    {
+      "symbol": "AVAX",
+      "hit_rate": 0.6818181818181818,
+      "mae_ratio": 0.985380018920919,
+      "coverage": 0.8055555555555556,
+      "cluster_key": "trust_high40|emb=24|sh=0.94|feat=mean_pairwise_per_atr|q=0.6-1.0",
+      "best_formula": {
+        "formula_id": "C0000-F0014",
+        "family": "trust_high40",
+        "system_col": "p_system_shrunk_custom",
+        "shrink_weight": 0.94,
+        "embargo_bars": 24,
+        "trust_feature": "mean_pairwise_per_atr",
+        "trust_q_low": 0.6,
+        "trust_q_high": 1.0
+      },
+      "json_path": "data\\runs\\strict_multi_cycle_avax.json"
+    },
+    {
+      "symbol": "BNB",
+      "hit_rate": 0.5428571428571428,
+      "mae_ratio": 0.9812714704638369,
+      "coverage": 1.0,
+      "cluster_key": "base|emb=12|sh=0.96",
+      "best_formula": {
+        "formula_id": "C0000-F0006",
+        "family": "base",
+        "system_col": "p_system_shrunk_custom",
+        "shrink_weight": 0.96,
+        "embargo_bars": 12,
+        "trust_feature": null,
+        "trust_q_low": null,
+        "trust_q_high": null
+      },
+      "json_path": "data\\runs\\strict_multi_cycle_bnb.json"
+    },
+    {
+      "symbol": "BTC",
+      "hit_rate": 0.5428571428571428,
+      "mae_ratio": 0.979663659970969,
+      "coverage": 1.0,
+      "cluster_key": "base|emb=24|sh=0.97",
+      "best_formula": {
+        "formula_id": "C0000-F0021",
+        "family": "base",
+        "system_col": "p_system_shrunk_custom",
+        "shrink_weight": 0.97,
+        "embargo_bars": 24,
+        "trust_feature": null,
+        "trust_q_low": null,
+        "trust_q_high": null
+      },
+      "json_path": "data\\runs\\strict_multi_cycle_btc.json"
+    },
+    {
+      "symbol": "DOGE",
+      "hit_rate": 0.6571428571428571,
+      "mae_ratio": 0.9689908262232688,
+      "coverage": 1.0,
+      "cluster_key": "base|emb=24|sh=0.95",
+      "best_formula": {
+        "formula_id": "C0000-F0015",
+        "family": "base",
+        "system_col": "p_system_shrunk_custom",
+        "shrink_weight": 0.95,
+        "embargo_bars": 24,
+        "trust_feature": null,
+        "trust_q_low": null,
+        "trust_q_high": null
+      },
+      "json_path": "data\\runs\\strict_multi_cycle_doge.json"
+    },
+    {
+      "symbol": "ETH",
+      "hit_rate": 0.5428571428571428,
+      "mae_ratio": 0.980853153086932,
+      "coverage": 1.0,
+      "cluster_key": "base|emb=24|sh=0.97",
+      "best_formula": {
+        "formula_id": "C0000-F0021",
+        "family": "base",
+        "system_col": "p_system_shrunk_custom",
+        "shrink_weight": 0.97,
+        "embargo_bars": 24,
+        "trust_feature": null,
+        "trust_q_low": null,
+        "trust_q_high": null
+      },
+      "json_path": "data\\runs\\strict_multi_cycle_eth.json"
+    },
+    {
+      "symbol": "LINK",
+      "hit_rate": 0.6,
+      "mae_ratio": 0.9781351435971739,
+      "coverage": 0.8055555555555556,
+      "cluster_key": "trust_high40|emb=24|sh=0.94|feat=mean_pairwise_per_atr|q=0.6-1.0",
+      "best_formula": {
+        "formula_id": "C0000-F0014",
+        "family": "trust_high40",
+        "system_col": "p_system_shrunk_custom",
+        "shrink_weight": 0.94,
+        "embargo_bars": 24,
+        "trust_feature": "mean_pairwise_per_atr",
+        "trust_q_low": 0.6,
+        "trust_q_high": 1.0
+      },
+      "json_path": "data\\runs\\strict_multi_cycle_link.json"
+    },
+    {
+      "symbol": "SOL",
+      "hit_rate": 0.6,
+      "mae_ratio": 0.9708148141556185,
+      "coverage": 1.0,
+      "cluster_key": "base|emb=24|sh=0.95",
+      "best_formula": {
+        "formula_id": "C0000-F0015",
+        "family": "base",
+        "system_col": "p_system_shrunk_custom",
+        "shrink_weight": 0.95,
+        "embargo_bars": 24,
+        "trust_feature": null,
+        "trust_q_low": null,
+        "trust_q_high": null
+      },
+      "json_path": "data\\runs\\strict_multi_cycle_sol.json"
+    },
+    {
+      "symbol": "TRX",
+      "hit_rate": 0.5,
+      "mae_ratio": 1.0059114820743147,
+      "coverage": 1.0,
+      "cluster_key": "base|emb=12|sh=0.97",
+      "best_formula": {
+        "formula_id": "C0000-F0009",
+        "family": "base",
+        "system_col": "p_system_shrunk_custom",
+        "shrink_weight": 0.97,
+        "embargo_bars": 12,
+        "trust_feature": null,
+        "trust_q_low": null,
+        "trust_q_high": null
+      },
+      "json_path": "data\\runs\\strict_multi_cycle_trx.json"
+    },
+    {
+      "symbol": "XRP",
+      "hit_rate": 0.65625,
+      "mae_ratio": 0.9701689075093439,
+      "coverage": 0.8888888888888888,
+      "cluster_key": "trust_high40|emb=24|sh=0.94|feat=mean_pairwise_per_atr|q=0.6-1.0",
+      "best_formula": {
+        "formula_id": "C0000-F0014",
+        "family": "trust_high40",
+        "system_col": "p_system_shrunk_custom",
+        "shrink_weight": 0.94,
+        "embargo_bars": 24,
+        "trust_feature": "mean_pairwise_per_atr",
+        "trust_q_low": 0.6,
+        "trust_q_high": 1.0
+      },
+      "json_path": "data\\runs\\strict_multi_cycle_xrp.json"
+    }
+  ],
+  "similar_pairs_top20": [
+    {
+      "pair": "BTC-ETH",
+      "symbol_a": "BTC",
+      "symbol_b": "ETH",
+      "formula_similarity": 1.0,
+      "hit_gap_abs": 0.0,
+      "mae_ratio_gap_abs": 0.0011894931159629474
+    },
+    {
+      "pair": "ADA-LINK",
+      "symbol_a": "ADA",
+      "symbol_b": "LINK",
+      "formula_similarity": 1.0,
+      "hit_gap_abs": 0.0060606060606061,
+      "mae_ratio_gap_abs": 0.008222407144825472
+    },
+    {
+      "pair": "AVAX-XRP",
+      "symbol_a": "AVAX",
+      "symbol_b": "XRP",
+      "formula_similarity": 1.0,
+      "hit_gap_abs": 0.025568181818181768,
+      "mae_ratio_gap_abs": 0.015211111411575051
+    },
+    {
+      "pair": "BNB-TRX",
+      "symbol_a": "BNB",
+      "symbol_b": "TRX",
+      "formula_similarity": 1.0,
+      "hit_gap_abs": 0.042857142857142816,
+      "mae_ratio_gap_abs": 0.024640011610477797
+    },
+    {
+      "pair": "ADA-XRP",
+      "symbol_a": "ADA",
+      "symbol_b": "XRP",
+      "formula_similarity": 1.0,
+      "hit_gap_abs": 0.05018939393939392,
+      "mae_ratio_gap_abs": 0.016188643232655453
+    },
+    {
+      "pair": "LINK-XRP",
+      "symbol_a": "LINK",
+      "symbol_b": "XRP",
+      "formula_similarity": 1.0,
+      "hit_gap_abs": 0.05625000000000002,
+      "mae_ratio_gap_abs": 0.007966236087829981
+    },
+    {
+      "pair": "BTC-SOL",
+      "symbol_a": "BTC",
+      "symbol_b": "SOL",
+      "formula_similarity": 1.0,
+      "hit_gap_abs": 0.05714285714285716,
+      "mae_ratio_gap_abs": 0.008848845815350503
+    },
+    {
+      "pair": "DOGE-SOL",
+      "symbol_a": "DOGE",
+      "symbol_b": "SOL",
+      "formula_similarity": 1.0,
+      "hit_gap_abs": 0.05714285714285716,
+      "mae_ratio_gap_abs": 0.0018239879323497243
+    },
+    {
+      "pair": "ETH-SOL",
+      "symbol_a": "ETH",
+      "symbol_b": "SOL",
+      "formula_similarity": 1.0,
+      "hit_gap_abs": 0.05714285714285716,
+      "mae_ratio_gap_abs": 0.01003833893131345
+    },
+    {
+      "pair": "ADA-AVAX",
+      "symbol_a": "ADA",
+      "symbol_b": "AVAX",
+      "formula_similarity": 1.0,
+      "hit_gap_abs": 0.07575757575757569,
+      "mae_ratio_gap_abs": 0.0009775318210804018
+    },
+    {
+      "pair": "AVAX-LINK",
+      "symbol_a": "AVAX",
+      "symbol_b": "LINK",
+      "formula_similarity": 1.0,
+      "hit_gap_abs": 0.08181818181818179,
+      "mae_ratio_gap_abs": 0.00724487532374507
+    },
+    {
+      "pair": "BTC-DOGE",
+      "symbol_a": "BTC",
+      "symbol_b": "DOGE",
+      "formula_similarity": 1.0,
+      "hit_gap_abs": 0.11428571428571432,
+      "mae_ratio_gap_abs": 0.010672833747700228
+    },
+    {
+      "pair": "DOGE-ETH",
+      "symbol_a": "DOGE",
+      "symbol_b": "ETH",
+      "formula_similarity": 1.0,
+      "hit_gap_abs": 0.11428571428571432,
+      "mae_ratio_gap_abs": 0.011862326863663175
+    },
+    {
+      "pair": "BNB-BTC",
+      "symbol_a": "BNB",
+      "symbol_b": "BTC",
+      "formula_similarity": 0.8,
+      "hit_gap_abs": 0.0,
+      "mae_ratio_gap_abs": 0.001607810492867845
+    },
+    {
+      "pair": "BNB-ETH",
+      "symbol_a": "BNB",
+      "symbol_b": "ETH",
+      "formula_similarity": 0.8,
+      "hit_gap_abs": 0.0,
+      "mae_ratio_gap_abs": 0.00041831737690489756
+    },
+    {
+      "pair": "BTC-TRX",
+      "symbol_a": "BTC",
+      "symbol_b": "TRX",
+      "formula_similarity": 0.8,
+      "hit_gap_abs": 0.042857142857142816,
+      "mae_ratio_gap_abs": 0.02624782210334564
+    },
+    {
+      "pair": "ETH-TRX",
+      "symbol_a": "ETH",
+      "symbol_b": "TRX",
+      "formula_similarity": 0.8,
+      "hit_gap_abs": 0.042857142857142816,
+      "mae_ratio_gap_abs": 0.025058328987382694
+    },
+    {
+      "pair": "BNB-SOL",
+      "symbol_a": "BNB",
+      "symbol_b": "SOL",
+      "formula_similarity": 0.8,
+      "hit_gap_abs": 0.05714285714285716,
+      "mae_ratio_gap_abs": 0.010456656308218348
+    },
+    {
+      "pair": "SOL-TRX",
+      "symbol_a": "SOL",
+      "symbol_b": "TRX",
+      "formula_similarity": 0.8,
+      "hit_gap_abs": 0.09999999999999998,
+      "mae_ratio_gap_abs": 0.035096667918696145
+    },
+    {
+      "pair": "BNB-DOGE",
+      "symbol_a": "BNB",
+      "symbol_b": "DOGE",
+      "formula_similarity": 0.8,
+      "hit_gap_abs": 0.11428571428571432,
+      "mae_ratio_gap_abs": 0.012280644240568073
+    }
+  ]
+}

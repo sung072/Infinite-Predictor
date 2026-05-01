@@ -1,0 +1,56 @@
+[
+  {
+    "n_used": 177.0,
+    "obs_hit": 0.5423728813559322,
+    "obs_ratio": 0.982404481595284,
+    "p_hit_perm_ge": 1.0,
+    "p_ratio_perm_le": 0.0033222591362126247,
+    "p_joint": 0.0033222591362126247,
+    "case": "BTC-oos"
+  },
+  {
+    "n_used": 431.0,
+    "obs_hit": 0.5081206496519721,
+    "obs_ratio": 0.9999786227705637,
+    "p_hit_perm_ge": 0.9966777408637874,
+    "p_ratio_perm_le": 1.0,
+    "p_joint": 0.9966777408637874,
+    "case": "BTC-wf"
+  },
+  {
+    "n_used": 177.0,
+    "obs_hit": 0.5113636363636364,
+    "obs_ratio": 0.9962282333689589,
+    "p_hit_perm_ge": 1.0,
+    "p_ratio_perm_le": 1.0,
+    "p_joint": 1.0,
+    "case": "ETH-oos"
+  },
+  {
+    "n_used": 431.0,
+    "obs_hit": 0.5081585081585082,
+    "obs_ratio": 1.0040026983121404,
+    "p_hit_perm_ge": 1.0,
+    "p_ratio_perm_le": 1.0,
+    "p_joint": 1.0,
+    "case": "ETH-wf"
+  },
+  {
+    "n_used": 177.0,
+    "obs_hit": 0.5371428571428571,
+    "obs_ratio": 0.9887732902565033,
+    "p_hit_perm_ge": 1.0,
+    "p_ratio_perm_le": 0.0033222591362126247,
+    "p_joint": 0.0033222591362126247,
+    "case": "SOL-oos"
+  },
+  {
+    "n_used": 431.0,
+    "obs_hit": 0.5211267605633803,
+    "obs_ratio": 0.995574728553988,
+    "p_hit_perm_ge": 1.0,
+    "p_ratio_perm_le": 0.9867109634551495,
+    "p_joint": 0.9867109634551495,
+    "case": "SOL-wf"
+  }
+]

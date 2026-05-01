@@ -1,0 +1,4 @@
+# 선택: NautilusTrader 런타임 (이 저장소 **core 테스트에는 불필요**)
+# pip install -r requirements-execution.txt
+# 프로젝트에 맞는 버전으로 고정 권장
+nautilus_trader

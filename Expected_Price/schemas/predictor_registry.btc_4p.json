@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "data_snapshot_id": "btc-demo-factors-001",
+  "predictors": [
+    {
+      "id": "btc_ema_fast",
+      "name": "빠른 EMA(단기) 목표가",
+      "horizon": { "kind": "bar", "spec": "1h", "timezone": "UTC" },
+      "status": "active",
+      "version": "0.1.0",
+      "symbol": "BTCUSDT",
+      "venue": "binance",
+      "base_asset": "BTC",
+      "quote_asset": "USDT",
+      "meta": { "factor_column": "p_ema_fast", "anchor_cohort": "trend" }
+    },
+    {
+      "id": "btc_ema_slow",
+      "name": "느린 EMA(장기) 목표가",
+      "horizon": { "kind": "bar", "spec": "1h", "timezone": "UTC" },
+      "status": "active",
+      "version": "0.1.0",
+      "symbol": "BTCUSDT",
+      "venue": "binance",
+      "base_asset": "BTC",
+      "quote_asset": "USDT",
+      "meta": { "factor_column": "p_ema_slow", "anchor_cohort": "trend" }
+    },
+    {
+      "id": "btc_resist_24h",
+      "name": "최근 24봉 고가 근접 저항(밴드)",
+      "horizon": { "kind": "bar", "spec": "24", "timezone": "UTC" },
+      "status": "challenger",
+      "version": "0.1.0",
+      "symbol": "BTCUSDT",
+      "venue": "binance",
+      "base_asset": "BTC",
+      "quote_asset": "USDT",
+      "meta": { "factor_column": "p_high_band", "anchor_cohort": "range" }
+    },
+    {
+      "id": "btc_support_24h",
+      "name": "최근 24봉 저가 근접 지지(밴드)",
+      "horizon": { "kind": "bar", "spec": "24", "timezone": "UTC" },
+      "status": "challenger",
+      "version": "0.1.0",
+      "symbol": "BTCUSDT",
+      "venue": "binance",
+      "base_asset": "BTC",
+      "quote_asset": "USDT",
+      "meta": { "factor_column": "p_low_band", "anchor_cohort": "range" }
+    }
+  ]
+}

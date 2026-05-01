@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "data_snapshot_id": "dev-model-artifact-001",
+  "predictors": [
+    {
+      "id": "vol_dynamic_trained",
+      "name": "거래량→종가 RF (배치 학습 아티팩트)",
+      "horizon": { "kind": "bar", "spec": "1", "timezone": "UTC" },
+      "status": "active",
+      "version": "0.1.0",
+      "meta": {
+        "model_artifact": "artifacts/vol_to_close_spike.example.joblib",
+        "model_kind": "dynamic_volume_to_close"
+      }
+    },
+    {
+      "id": "eth_beta_pair_1d",
+      "name": "대조 앵커(기존 예시와 동일 id)",
+      "horizon": { "kind": "wall_clock", "spec": "1d", "timezone": "UTC" },
+      "status": "challenger",
+      "version": "0.1.0",
+      "meta": { "factor_column": "p_eth" }
+    }
+  ]
+}
